@@ -117,21 +117,21 @@ const Navbar = () => {
             </div>
             <ul className="flex flex-col items-start mx-5 gap-5 pb-5 text-lg font-semibold text-white">
               <li className="pb-1 pt-0.5 w-full px-5 rounded-md hover:text-primary hover:bg-white">
-                <Link href="/" onClick={toggleMenu}>
+                <Link href="/" onClick={toggleMenu} className="block w-full">
                   Home
                 </Link>
               </li>
               <li className="pb-1 pt-0.5 w-full px-5 rounded-md hover:text-primary hover:bg-white">
-                <Link href="/services" onClick={toggleMenu}>
+                <Link href="/services" onClick={toggleMenu} className="block w-full">
                   Services
                 </Link>
               </li>
               <li className="pb-1 pt-0.5 w-full px-5 rounded-md hover:text-primary hover:bg-white">
-                <Link href="/download" onClick={toggleMenu}>
+                <Link href="/download" onClick={toggleMenu} className="block w-full">
                   Download
                 </Link>
               </li>
-              <li className="pb-1 pt-0.5 w-full px-5 rounded-md hover:text-primary hover:bg-white" onClick={() => handleMobileDropdown("notification")}>
+              <li className="pb-1 pt-0.5 w-full px-5 block rounded-md hover:text-primary hover:bg-white" onClick={() => handleMobileDropdown("notification")}>
                 <span className="cursor-pointer">Notification</span>
                 {mobileDropdown === "notification" && (
                   <ul className="bg-white text-black text-sm shadow-lg">
@@ -199,12 +199,12 @@ const Navbar = () => {
                 )}
               </li>
               <li className="pb-1 pt-0.5 w-full px-5 rounded-md hover:text-primary hover:bg-white">
-                <Link href="/number-converter" onClick={toggleMenu}>
+                <Link href="/number-converter" onClick={toggleMenu} className="block w-full">
                   Number Converter
                 </Link>
               </li>
               <li className="pb-1 pt-0.5 w-full px-5 rounded-md hover:text-primary hover:bg-white">
-                <Link href="/contact" onClick={toggleMenu}>
+                <Link href="/contact" onClick={toggleMenu} className="block w-full">
                   Contact
                 </Link>
               </li>
