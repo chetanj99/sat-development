@@ -10,8 +10,7 @@ const Schedule = () => {
           Change Starts with a Single Step
         </h2>
         <p className="sm:text-xl text-lg text-center">
-          Ac cum nunc vitae ut turpis praesent nunc odio lorem dictumst
-          vestibulum sem pharetra urna pretium.
+          We are a group of professional advocate, CA and CS
         </p>
         <Link href="/contact">
           <button className="hover:bg-white flex items-center m-auto gap-5 hover:text-primary duration-500 border border-white py-2.5 px-7 rounded-lg text-[16px] font-semibold tracking-wide mt-10">

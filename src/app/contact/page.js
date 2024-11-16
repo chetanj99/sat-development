@@ -20,12 +20,10 @@ const Contact = () => {
                 Feel free to contact me for any questions and doubts
               </h3>
               <p className="text-sm md:text-lg mt-4">
-                Vulputate egestas nullam volutpat diam nisi at venenatis
-                adipiscing massa posuere massa nulla massa id integer.
+                At Sat Associates, we pride ourselves on offering personalized consulting and licensing services tailored to meet your needs.
               </p>
               <p className="text-sm md:text-lg mt-4">
-                Vulputate egestas nullam volutpat diam nisi at venenatis
-                adipiscing massa posuere massa nulla massa id integer.
+                Our team of professionals ensures you receive expert guidance and support to achieve your business goals efficiently.
               </p>
               <p className='text-sm md:text-lg mt-12'>Stay in Touch</p>
               <div className='flex justify-between items-center text-xl md:text-2xl mt-8'>
@@ -47,9 +45,6 @@ const Contact = () => {
               <h2 className="text-3xl md:text-[38px] tracking-wide mb-6">
                 I would love to hear from you
               </h2>
-              <h3 className="text-sm md:text-lg tracking-wide mb-10">
-                Vitae nibh lacinia egestas scelerisque in purus cursus sed.
-              </h3>
               <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   className="col-span-2 md:p-3 p-2 rounded border md:text-lg text-sm border-gray-300 text-black"
@@ -89,8 +84,7 @@ const Contact = () => {
             <div>
               <h4 className="font-bold uppercase mb-2">Find Us</h4>
               <p className="sm:text-lg text-[16px]">
-                Sat Associates, Near Balaji hall, 150 FT Ring Road, Rajkot -
-                360004, Gujarat
+                Sat Associates, 523, The Corporate World, Near Suvarna bhoomi Chowk, 80 Feet Ring Road, Rajkot Gujarat - 360005, India
               </p>
             </div>
           </div>

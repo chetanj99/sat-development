@@ -14,7 +14,7 @@ const Navbar = () => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   const [dropdown, setDropdown] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
-  const [navbarBackground, setNavbarBackground] = useState(url === "/lei-certificate" ? true : false);
+  const [navbarBackground, setNavbarBackground] = useState(url === "/lei-certificate" || url === "/number-converter" ? true : false);
 
   useEffect(() => {
     const handleEscapeKey = (e) => {
@@ -37,7 +37,7 @@ const Navbar = () => {
     };
 
     const handleScroll = () => {
-      if (url !== "/lei-certificate") {
+      if (url !== "/lei-certificate" && url !== "/number-converter") {
         if (window.scrollY >= 200) {
           setNavbarBackground(true);
         } else {
@@ -122,11 +122,6 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="pb-1 pt-0.5 w-full px-5 rounded-md hover:text-primary hover:bg-white">
-                <Link href="/about" onClick={toggleMenu}>
-                  About
-                </Link>
-              </li>
-              <li className="pb-1 pt-0.5 w-full px-5 rounded-md hover:text-primary hover:bg-white">
                 <Link href="/services" onClick={toggleMenu}>
                   Services
                 </Link>
@@ -153,7 +148,7 @@ const Navbar = () => {
                       </li>
                     </Link>
                     <Link
-                      href="https://www.cbic.gov.in/"
+                      href="https://foservices.icegate.gov.in/#/services/viewExchangeRate"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -203,60 +198,10 @@ const Navbar = () => {
                   </ul>
                 )}
               </li>
-              <li className="pb-1 pt-0.5 w-full px-5 rounded-md hover:text-primary hover:bg-white" onClick={() => handleMobileDropdown("important")}>
-                <span className="cursor-pointer">Important</span>
-                {mobileDropdown === "important" && (
-                  <ul className="bg-white text-black text-sm shadow-lg">
-                    <Link
-                      href="https://www.dgft.gov.in/CP/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <li
-                        className="px-4 py-2 hover:bg-primary hover:text-white"
-                        onClick={toggleMenu}
-                      >
-                        DGFT
-                      </li>
-                    </Link>
-                    <Link
-                      href="https://www.incometax.gov.in/iec/foportal/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <li
-                        className="px-4 py-2 hover:bg-primary hover:text-white"
-                        onClick={toggleMenu}
-                      >
-                        Income
-                      </li>
-                    </Link>
-                    <Link
-                      href="https://www.gst.gov.in/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <li
-                        className="px-4 py-2 hover:bg-primary hover:text-white"
-                        onClick={toggleMenu}
-                      >
-                        GST
-                      </li>
-                    </Link>
-                    <Link
-                      href="https://www.icegate.gov.in/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <li
-                        className="px-4 py-2 hover:bg-primary hover:text-white"
-                        onClick={toggleMenu}
-                      >
-                        Icegate
-                      </li>
-                    </Link>
-                  </ul>
-                )}
+              <li className="pb-1 pt-0.5 w-full px-5 rounded-md hover:text-primary hover:bg-white">
+                <Link href="/number-converter" onClick={toggleMenu}>
+                  Number Converter
+                </Link>
               </li>
               <li className="pb-1 pt-0.5 w-full px-5 rounded-md hover:text-primary hover:bg-white">
                 <Link href="/contact" onClick={toggleMenu}>
@@ -273,22 +218,22 @@ const Navbar = () => {
         </Link>
 
         <div className="flex ">
-          <ul className="hidden md:flex items-center gap-10 text-lg font-semibold">
+          <ul className="hidden lg:flex items-center gap-10 text-lg font-semibold">
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/" className={`${url == "/" ? "active" : ""}`}>Home</Link>
             </li>
             <li>
-              <Link href="/services">Services</Link>
+              <Link href="/services" className={`${url == "/services" ? "active" : ""}`}>Services</Link>
             </li>
             <li>
-              <Link href="/download">Download</Link>
+              <Link href="/download" className={`${url == "/download" ? "active" : ""}`}>Download</Link>
             </li>
             <li
               className="relative group"
               onMouseEnter={() => handleMouseEnter("notification")}
               onMouseLeave={handleMouseLeave}
             >
-              <span className="cursor-pointer">Notification</span>
+              <span className={`cursor-pointer`}>Notification</span>
               {dropdown === "notification" && (
                 <ul className="absolute left-0 w-48 bg-white text-black text-sm shadow-lg group-hover:block">
                   <Link
@@ -301,7 +246,7 @@ const Navbar = () => {
                     </li>
                   </Link>
                   <Link
-                    href="https://www.cbic.gov.in/"
+                    href="https://foservices.icegate.gov.in/#/services/viewExchangeRate"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -339,61 +284,19 @@ const Navbar = () => {
                 </ul>
               )}
             </li>
-            <li
-              className="relative group"
-              onMouseEnter={() => handleMouseEnter("important")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <span className="cursor-pointer">Important</span>
-              {dropdown === "important" && (
-                <ul className="absolute left-0 w-48 bg-white text-black text-sm shadow-lg group-hover:block">
-                  <Link
-                    href="https://www.dgft.gov.in/CP/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li className="px-4 py-2 hover:bg-primary hover:text-white">
-                      DGFT
-                    </li>
-                  </Link>
-                  <Link
-                    href="https://www.incometax.gov.in/iec/foportal/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li className="px-4 py-2 hover:bg-primary hover:text-white">
-                      Income
-                    </li>
-                  </Link>
-                  <Link
-                    href="https://www.gst.gov.in/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li className="px-4 py-2 hover:bg-primary hover:text-white">
-                      GST
-                    </li>
-                  </Link>
-                  <Link
-                    href="https://www.icegate.gov.in/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li className="px-4 py-2 hover:bg-primary hover:text-white">
-                      Icegate
-                    </li>
-                  </Link>
-                </ul>
-              )}
+            <li>
+              <Link href="/number-converter" className={`${url == "/number-converter" ? "active" : ""}`} onClick={toggleMenu}>
+                Number Converter
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact" className={`${url == "/contact" ? "active" : ""}`}>Contact</Link>
             </li>
           </ul>
 
           <button
             ref={openSidebarButton}
-            className="text-3xl block md:hidden ml-4"
+            className="text-3xl block lg:hidden ml-4"
             onClick={() => setIsSidebarActive(true)}
           >
             <FaBars />

@@ -11,16 +11,13 @@ const Footer = () => {
                 <div className="w-full mb-10 md:mb-0">
                     <h2 className="text-xl font-semibold mb-4 tracking-wide">Sat Associates</h2>
                     <p className="text-white text-lg">
-                        Scelerisque imperdiet ridiculus arcu scelerisque lobortis vel hendrerit aliquam eget sed purus risus eu nunc massa, arcu odio eget iaculis.
+                        Sat Associates was established in the year 2015. It is a leading consulting and licensing rendering comprehensive professional services.
                     </p>
                 </div>
                 <div className='flex md:gap-14 items-start w-full'>
                     <div className="w-full mb-10 md:mb-0">
                         <h3 className="font-semibold mb-4 text-xl tracking-wide">Quick Links</h3>
                         <ul>
-                            <li className="mb-1 text-[16px] hover:font-bold duration-200">
-                                <Link href="/about">About</Link>
-                            </li>
                             <li className="mb-1 text-[16px] hover:font-bold duration-200">
                                 <Link href="/services">Services</Link>
                             </li>
@@ -50,7 +47,7 @@ const Footer = () => {
                                 </li>
                             </Link>
                             <Link
-                                href="https://www.cbic.gov.in/"
+                                href="https://foservices.icegate.gov.in/#/services/viewExchangeRate"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -90,9 +87,7 @@ const Footer = () => {
                 </div>
                 <div className="w-full mb-10 md:mb-0">
                     <h3 className="font-semibold mb-4 text-xl tracking-wide">Contact Info</h3>
-                    <p className="mb-2 text-[16px]">Sat Associates, Near Balaji hall,
-                        150 FT Ring Road, Rajkot - 360004,
-                        Gujarat</p>
+                    <p className="mb-2 text-[16px]">523, The Corporate World, Near Suvarna bhoomi Chowk, 80 Feet Ring Road, Rajkot Gujarat - 360005, India</p>
                     <p className="mb-2 text-[16px]">info@Satgroup.co.in</p>
                     <p className="mb-2 text-[16px]">+91 7878050553</p>
                 </div>
